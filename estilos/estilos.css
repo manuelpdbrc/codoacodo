@@ -86,11 +86,14 @@ header img {
   object-fit: cover;
 }
 
+/* Fondo translçucido */
 header .marco-texto {
   z-index: 20;
   background-color: hsla(187, 84%, 24%, 0.8);
-  padding: 10px 25px;
+  padding: 0 25px;
   border-radius: 10px;
+  width: 100%;
+  max-width: 350px;
 }
 
 /* TRANKI */
@@ -148,12 +151,12 @@ h2 {
   font-size: 2.5rem;
   font-weight: 100; /* los h2 están por defecto en negrita (bold) pero con esta fuente queda mal, con font-weight:100 ya no están en negrita */
   margin: 0 auto 35px auto;
-  max-width: 700px;
+  max-width: 900px;
 }
 
 p {
   margin: 25px auto 0 auto;
-  max-width: 700px;
+  max-width: 900px;
 }
 
 .fondo-1 {
@@ -188,19 +191,19 @@ p {
   text-align: center;
 }
 
-.destacadas-flex {
+.recetas-destacadas-flex {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   margin: 40px auto 0 auto;
 }
 
 .card-receta {
   background-color: var(--negro);
-  width: 300px;
+  width: 330px;
   min-height: 400px;
   border-radius: 10px;
   font-size: 1rem;
@@ -301,13 +304,13 @@ p {
 }
 
 .footer-pagina .footer-enlaces a:hover {
-  color: var(--color-2);
+  color: var(--color-3);
 }
 
 /* ( Foter extra: info del grupo ) */
 .footer-grupo-2 {
   background-color: var(--negro);
-  color: var(--color-1);
+  color: var(--color-2);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -324,11 +327,12 @@ p {
 
 /* estos son todos los hijos directos ( > * ) de los div que sean hijos directos ( > div ) de .footer-grupo-2, osea, los <p>, la <ul> y el <a> que están el los div que estan en el footer-grupo-2 */
 .footer-grupo-2 > div > * {
-  margin-bottom: 15px;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .footer-grupo-2 a {
-  color: var(--color-1);
+  color: var(--color-2);
   height: fit-content;
   padding: 4px 8px;
   border-radius: 50%;
@@ -336,7 +340,7 @@ p {
 }
 
 .footer-grupo-2 a:hover {
-  background-color: var(--color-1);
+  background-color: var(--color-2);
   color: var(--negro);
 }
 
@@ -345,5 +349,52 @@ p {
   color: red;
   padding: 10px;
   border: 2px solid red;
-  width: 300px
+  max-width: 300px
+}
+
+/* Media queries (break points o puntos de quiebre ) */
+
+/*Para pantallas de 900px o menos de ancho */
+@media screen and (max-width: 900px) {
+  article {
+    padding: 60px 25px;
+  }
+  h2 {
+    max-width: 600px;
+  }
+  p {
+    max-width: 600px;
+  }
+  .card-receta {
+    width: calc((100% - 90px) / 2);
+    min-width: 250px;
+    max-width: 400px;
+  }
+}
+
+/*Para pantallas de 600px o menos de ancho */
+@media screen and (max-width: 600px) {
+  article {
+    padding: 60px 20px;
+  }
+  h2 {
+    max-width: 500px;
+  }
+  p {
+    max-width: 500px;
+  }
+  .card-receta {
+    width: 100%;
+  }
+}
+
+/*Para pantallas de 460px o menos de ancho */
+@media screen and (max-width: 460px) {
+  article {
+    padding: 60px 10px;
+  }
+  .card-receta {
+    width: 100%;
+    min-width: 200px;
+  }
 }
