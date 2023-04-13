@@ -70,7 +70,7 @@ body {
 header {
   position: relative;
   min-height: 50vh;
-  padding: 60px 10px;
+  padding: 60px 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,7 +90,7 @@ header img {
 header .marco-texto {
   z-index: 20;
   background-color: hsla(187, 84%, 24%, 0.8);
-  padding: 0 25px;
+  padding: 20px 0;
   border-radius: 10px;
   width: 100%;
   max-width: 350px;
@@ -112,22 +112,27 @@ header .frase {
 
 /* Barra de navegación */
 nav {
+  position: sticky;
+  top: -1px;
+  z-index: 100;
+  padding: 5px 10px 0 0;
   background-color: var(--color-4);
   display: flex;
   justify-content: flex-end;
-  padding: 3px 10px;
+  align-items: end;
   font-size: 1rem;
-  position: sticky;
-  top: -1px;
 }
 
+/* Todos los <a> en general sin subrayado y blancos */
 a {
   text-decoration: none;
   color: var(--blanco);
 }
 
+/* los <a> de la barra de navegación*/
 nav .nav-enlaces a {
-  padding: 2px 4px;
+  display: inline-block;
+  padding: 3px 5px;
 }
 
 nav .nav-enlaces a:hover {
@@ -135,7 +140,7 @@ nav .nav-enlaces a:hover {
 }
 
 /* Main */
-/* Estilos generales de secciones (<sectio>), artículos (<article>), tarjetas (.card), etc */
+/* Estilos generales de secciones (<section>), artículos (<article>), tarjetas (.card), etc */
 section {
   display: flex;
   flex-wrap: wrap;
@@ -146,17 +151,21 @@ article {
   width: 100%;
 }
 
-h2 {
+h1, h2 {
   font-family: var(--font-2), var(--font-1), sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 100; /* los h2 están por defecto en negrita (bold) pero con esta fuente queda mal, con font-weight:100 ya no están en negrita */
   margin: 0 auto 35px auto;
-  max-width: 900px;
+  max-width: 800px;
+}
+
+h2 {
+  font-size: 2.5rem;
 }
 
 p {
   margin: 25px auto 0 auto;
-  max-width: 900px;
+  max-width: 800px;
 }
 
 .fondo-1 {
@@ -187,7 +196,7 @@ p {
 /* Estilos específicos */
 .articulo-banner-inicio-1,
 .articulo-banner-inicio-2 {
-  flex: 400px;
+  flex: 350px;
   text-align: center;
 }
 
@@ -220,7 +229,7 @@ p {
   height: 50%;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
-  border-bottom: 3px solid var(--color-3);
+  border-bottom: 3px solid var(--color-2);
 }
 
 .card-receta .contenedor-texto {
@@ -229,44 +238,6 @@ p {
 
 .card-receta .contenedor-texto h4 {
   color: var(--color-1);
-}
-
-.subir-foto {
-  flex: 300px;
-}
-
-.subir-receta {
-  flex: 500px;
-}
-
-/* Estilo compartido por los botones 'Mi Foto' y 'Contacto' */
-.subir-foto button, .subir-receta button {
-  font-family: var(--font-2);
-  font-size: 2.5rem;
-  padding: 30px 0;
-  display: block;
-  margin: 35px auto 0 auto;
-  width: 100%;
-  max-width: 400px;
-  border: none;
-  border-radius: 10px;
-}
-
-/* Colores del botón 'Mi foto' */
-.subir-foto button {
-  background-color: var(--color-3);
-  color: var(--blanco);
-}
-
-/* Colores del botón 'Contacto' */
-.subir-receta button {
-  background-color: var(--color-2);
-  color: var(--negro);
-}
-
-/* Algún efecto al poner el puntero sobre los botones */
-.subir-foto button:hover, .subir-receta button:hover {
-  transform: translateY(-2px);
 }
 
 /* Footer de la página de recetas*/
@@ -319,16 +290,16 @@ p {
   font-size: 0.8rem;
 }
 
-/* estos son los div que sean hijos directos de .footer-grupo-2 */
+/* estos son los div que sean hijos (descendientes directos) de .footer-grupo-2 */
 .footer-grupo-2 > div {
   flex: 150px;
   text-align: center;
 }
 
-/* estos son todos los hijos directos ( > * ) de los div que sean hijos directos ( > div ) de .footer-grupo-2, osea, los <p>, la <ul> y el <a> que están el los div que estan en el footer-grupo-2 */
+/* estos son todos los hijos (descendientes directos) ( > * ) de los div que sean hijos ( > div ) de .footer-grupo-2, osea, los <p>, la <ul> y el <a> que están el los div que estan en el footer-grupo-2 */
 .footer-grupo-2 > div > * {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .footer-grupo-2 a {
@@ -344,9 +315,11 @@ p {
   color: var(--negro);
 }
 
+/* Esto es provisorio */
 .mensage-del-grupo {
   background-color: white;
   color: red;
+  font-weight: bold;
   padding: 10px;
   border: 2px solid red;
   max-width: 300px
@@ -356,28 +329,29 @@ p {
 
 /*Para pantallas de 900px o menos de ancho */
 @media screen and (max-width: 900px) {
-  article {
-    padding: 60px 25px;
-  }
-  h2 {
+  h1, h2 {
     max-width: 600px;
   }
   p {
     max-width: 600px;
   }
   .card-receta {
-    width: calc((100% - 90px) / 2);
+    width: calc((100% - 50px) / 2);
     min-width: 250px;
-    max-width: 400px;
+    max-width: 350px;
   }
 }
 
 /*Para pantallas de 600px o menos de ancho */
 @media screen and (max-width: 600px) {
+  nav {
+    padding: 5px 0 0 0;
+    justify-content: center;
+  }
   article {
     padding: 60px 20px;
   }
-  h2 {
+  h1, h2 {
     max-width: 500px;
   }
   p {
@@ -390,11 +364,13 @@ p {
 
 /*Para pantallas de 460px o menos de ancho */
 @media screen and (max-width: 460px) {
+  nav .nav-enlaces a {
+    padding: 3px 2px;
+  }
   article {
     padding: 60px 10px;
   }
-  .card-receta {
-    width: 100%;
-    min-width: 200px;
+  .footer-pagina {
+    padding: 50px 15px;
   }
 }
