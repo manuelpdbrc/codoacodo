@@ -156,7 +156,6 @@ h1, h2 {
   font-size: 2.8rem;
   font-weight: 100; /* los h2 están por defecto en negrita (bold) pero con esta fuente queda mal, con font-weight:100 ya no están en negrita */
   margin: 0 auto 35px auto;
-  max-width: 800px;
 }
 
 h2 {
@@ -165,7 +164,12 @@ h2 {
 
 p {
   margin: 25px auto 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6, p {
   max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .fondo-1 {
@@ -211,9 +215,8 @@ p {
 }
 
 .card-receta {
-  background-color: var(--negro);
-  width: 330px;
-  min-height: 400px;
+  width: 100%;
+  max-width: 310px;
   border-radius: 10px;
   font-size: 1rem;
   box-shadow: 0 2px 15px var(--negro);
@@ -224,13 +227,9 @@ p {
   transform: scale(1.05);
 }
 
-.card-receta a {
-  
-}
-
 .card-receta img {
   width: 100%;
-  height: 50%;
+  height: 200px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
   border-bottom: 3px solid var(--color-2);
@@ -238,6 +237,7 @@ p {
 
 .card-receta .contenedor-texto {
   padding: 10px;
+  height: fit-content;
 }
 
 .card-receta .contenedor-texto h4 {
@@ -333,16 +333,14 @@ p {
 
 /*Para pantallas de 900px o menos de ancho */
 @media screen and (max-width: 900px) {
-  h1, h2 {
+  h1, h2, h3, h4, h5, h6, p {
     max-width: 600px;
   }
-  p {
-    max-width: 600px;
+  .recetas-destacadas-flex {
+    column-gap: 25px;
   }
   .card-receta {
-    width: calc((100% - 50px) / 2);
-    min-width: 250px;
-    max-width: 350px;
+    max-width: 250px;
   }
 }
 
@@ -355,19 +353,20 @@ p {
   article {
     padding: 60px 20px;
   }
-  h1, h2 {
+  h1, h2, h3, h4, h5, h6, p {
     max-width: 500px;
   }
-  p {
-    max-width: 500px;
+  .recetas-destacadas-flex {
+    column-gap: 15px;
   }
   .card-receta {
-    width: 100%;
+    width: calc((100% - 30px) / 2);
+    min-width: 200px;
   }
 }
 
-/*Para pantallas de 460px o menos de ancho */
-@media screen and (max-width: 460px) {
+/*Para pantallas de 470px o menos de ancho */
+@media screen and (max-width: 470px) {
   nav .nav-enlaces a {
     padding: 3px 2px;
   }
@@ -376,5 +375,9 @@ p {
   }
   .footer-pagina {
     padding: 50px 15px;
+  }
+  .card-receta {
+    width: 100%;
+    max-width: 320px;
   }
 }
