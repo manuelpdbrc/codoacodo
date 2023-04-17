@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+  }
+  
+.formulario1 {
+    width: 400px;
+    padding: 30px;
+    background: #2f7a63;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: ;
+    color: #d7ffa3;
+}
