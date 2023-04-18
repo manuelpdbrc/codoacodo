@@ -382,3 +382,14 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 
+ 
+.formulario1 {
+  width: 400px;
+  padding: 30px;
+  background: #2f7a63;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  font-family: ;
+  color: #d7ffa3;
+}
