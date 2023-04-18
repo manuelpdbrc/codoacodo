@@ -243,6 +243,47 @@ h1, h2, h3, h4, h5, h6, p {
 .card-receta .contenedor-texto h4 {
   color: var(--color-1);
 }
+/* seccion formulario*/ 
+.formulario1 {
+  width: 400px;
+  padding: 30px;
+  background: #2f7a63;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  color: #d7ffa3;
+}
+.formulario1 h1 {
+  margin bottom: 50px;
+}
+
+.formulario1 p {
+  text-align: justify;
+}
+
+.form2 {
+  width: 100%;
+  background-color: #202020;
+  padding: 13px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  border-color: #a0a0a0;
+  box-shadow: 10px;
+  font-size: 14px;
+  color: #fcfcfc;
+}
+
+.boton {
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  border-color: #29a748;
+  background-color: #d7ffa3;
+  color: #124122;
+
+}
+
 
 /* Footer de la página de recetas*/
 .footer-pagina {
@@ -382,14 +423,3 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 
- 
-.formulario1 {
-  width: 400px;
-  padding: 30px;
-  background: #2f7a63;
-  margin: auto;
-  margin-top: 100px;
-  border-radius: 4px;
-  font-family: ;
-  color: #d7ffa3;
-}
