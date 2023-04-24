@@ -243,18 +243,16 @@ h1, h2, h3, h4, h5, h6, p {
 .card-receta .contenedor-texto h4 {
   color: var(--color-1);
 }
-/* seccion formulario*/ 
+
+/* Seccón formulario*/ 
 .formulario1 {
   width: 400px;
   padding: 30px;
   background: #2f7a63;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 50px;
   border-radius: 4px;
   color: #d7ffa3;
-}
-.formulario1 h1 {
-  margin bottom: 50px;
 }
 
 .formulario1 p {
