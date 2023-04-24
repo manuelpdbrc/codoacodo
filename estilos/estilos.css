@@ -217,6 +217,17 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
   text-align: center;
 }
 
+/* Recetas destacadas */
+
+.enlace-rec-mi-foto {
+  padding: 0 5px;
+  border-radius: 5px;
+  margin-left: -5px;
+}
+.enlace-rec-mi-foto:hover {
+  background-color: var(--color-3);
+}
+
 .recetas-destacadas-flex {
   width: 100%;
   max-width: 1200px;
