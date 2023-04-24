@@ -5,23 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- estilos -->
-    <link rel="stylesheet" href="..\estilos\estilos.css" />
+    <link rel="stylesheet" href="../estilos/estilos.css" />
     <!-- animate.css -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins&display=swap" rel="stylesheet" />
     <!-- font awesome -->
-    <script
-      src="https://kit.fontawesome.com/4fbc6e35ac.js"
-      crossorigin="anonymous"
+    <script src="https://kit.fontawesome.com/4fbc6e35ac.js" crossorigin="anonymous"
     ></script>
     <!-- icono de pestaña -->
     <link rel="icon" type="image/png" href="../iconos/TRANKI-icono.png" />
@@ -30,21 +22,12 @@
 
   <body>
 
-    <!-- Header -->
-    <header class="fondo-1">
-      <img src="../imagenes/sacando-foto.jpg" alt="persona sacando foto a comida" />
-      <div class="marco-texto">
-        <div class="nombre animate__animated animate__fadeInDown animate__delay-0.5s animate__slower">
-          TRANKI
-        </div>
-        <div class="frase animate__animated animate__fadeInUp animate__delay-0.5s animate__slower">
-          Hoy cocino yo!
-        </div>
-      </div>
-    </header>
-
+    
     <!-- Barra de navegación -->
     <nav>
+      <div class="logo-nav fondo-negro animate__animated animate__fadeInDown animate__delay-0.5s animate__slower">
+        TRANKI
+      </div>
       <div class="nav-enlaces">
         <a href="../index.html">Inicio</a>
       </div>
@@ -52,36 +35,35 @@
 
     <!-- Main -->
     <main>
+      <section>
+        <article class="pag-subi-tu-foto fondo-3">
+          <h1>Subi Tu Foto!</h1>
+          <p>Creamos esta seccion para que nuestros seguidores compartan sus creaciones con todos!</p>
+          <p>Animate a subir tu foto de tu plato favorito!</p>
 
-      <!-- Esta seccion tiene dos artículo que son los banners -->
-      <!-- Dentro de las secciones hay uno o mas articulos con distinto color -->
-      <!-- Todos los articulos tienen cierto padding. Elegimos el color agregando la clase fondo-1, fondo-2, fondo-3, etc -->
-      <section class="formulario1">
-        <h1>Subi Tu Foto!</h1>
-        <p>Creamos esta seccion para que nuestros seguidores compartan sus creaciones con todos!
-            Animate a subir tu foto de tu plato favorito!</p>
+          <form class="formulario1" target="_blank" action="https://formsubmit.co/jesicamoure1@gmail.com" method="POST">
 
-            <form action="subitufoto" class="form1">
+            <input class="form2" type="text" name="nombres" placeholder="Ingrese su nombre">
+                
+            <input class="form2" type="text" name="apellidos" placeholder="Ingrese su apellido">
+                
+            <input class="form2"type="text" name="localidad" placeholder="Ingrese su localidad y provincia">
 
-                <input class="form2" type="text" name="nombres" id="nombres" placeholder="Ingrese su nombre">
+            <input class="form2" type="email" name="email" placeholder="Ingrese su em@il">
                 
-                <input class="form2" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su apellido">
+            <input class="form2" type="text" name="titulo" placeholder="Ingrese el titulo de su receta">
                 
-                <input class="form2"type="text" name="localidad" id="localidad" placeholder="Ingrese su localidad y provincia">
+            <input class="form2" type="file" name="archivo" placeholder="Ingresa tu foto">
 
-                <input type="email" name="email" id="email" placeholder="Ingrese su em@il">
-                
-                <input type="text" name="titulo" id="titulo" placeholder="Ingrese el titulo de su receta">
-                
-                <input type="file" name="archivo" id="archivo" placeholder="Ingresa tu foto">
-
-                <input type="checkbox" name="terminosycondiciones" id="terminosycondiciones">
-                <label for="terminosycondiciones">Acepto los <a href="#">Terminos y Condiciones</a>.</label>
-                
-                <input type="button" value="Subir Foto!">
+            <input class="terminosycondiciones" type="checkbox" name="terminosycondiciones">
+            <label for="terminosycondiciones">Acepto los <a href="#">Terminos y Condiciones</a>.</label>
+ 
+            <button class="boton" type="submit">Subir Foto!</button>
 
             </form>
-  </section>
+            
+        </article>
+      </section>
 
     </main>
 
@@ -146,5 +128,6 @@
       </div>
 
     </footer>
+
   </body>
 </html>
