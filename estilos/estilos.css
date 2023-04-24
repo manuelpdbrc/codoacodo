@@ -115,11 +115,11 @@ nav {
   position: sticky;
   top: -1px;
   z-index: 100;
-  padding: 5px 10px 0 0;
+  padding: 5px 20px 3px 20px;
   background-color: var(--color-4);
   display: flex;
   justify-content: flex-end;
-  align-items: end;
+  align-items: center;
   font-size: 1rem;
 }
 
@@ -127,6 +127,18 @@ nav {
 a {
   text-decoration: none;
   color: var(--blanco);
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--blanco);
+}
+
+/* Loguito en nav*/
+.logo-nav {
+  padding: 0 5px;
+  border-radius: 5px;
+  margin-right: auto;
 }
 
 /* los <a> de la barra de navegación*/
@@ -166,7 +178,8 @@ p {
   margin: 25px auto 0 auto;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
+  width: 100%;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -244,45 +257,59 @@ h1, h2, h3, h4, h5, h6, p {
   color: var(--color-1);
 }
 
-/* Seccón formulario*/ 
+.carousel {
+  margin-top: 40px;
+}
+
+.carousel img {
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.mi-foto-boton {
+  display: block;
+  width: fit-content;
+  margin: 40px auto 0 auto;
+}
+
+.pag-subi-tu-foto > h1,
+.pag-subi-tu-foto > p {
+  text-align: center;
+}
+
+/* Formulario Subí tu foto*/ 
 .formulario1 {
   width: 400px;
   padding: 30px;
-  background: #2f7a63;
+  background: var(--color-4);
+  color: var(--color-1);
   margin: auto;
-  margin-top: 50px;
+  margin-top: 40px;
   border-radius: 4px;
-  color: #d7ffa3;
-}
-
-.formulario1 p {
-  text-align: justify;
-  padding-bottom: 10px;
 }
 
 .form2 {
   width: 100%;
-  background-color: #202020;
+  background-color: var(--negro);
   padding: 13px;
   border-radius: 4px;
   margin-bottom: 5px;
   border-color: #a0a0a0;
   box-shadow: 10px;
   font-size: 14px;
-  color: #fcfcfc;
+  color: var(--blanco);
 }
 
-.boton {
+.formulario1 .boton {
   width: 100%;
   padding: 15px;
   font-size: 20px;
   border-radius: 10px;
-  border-color: #29a748;
-  background-color: #d7ffa3;
-  color: #124122;
-
+  border-color: var(--color-3);
+  background-color: var(--color-1);
+  color: var(--negro);
+  margin-top: 30px;
 }
-
 
 /* Footer de la página de recetas*/
 .footer-pagina {
@@ -373,7 +400,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 /*Para pantallas de 900px o menos de ancho */
 @media screen and (max-width: 900px) {
-  h1, h2, h3, h4, h5, h6, p {
+  h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
     max-width: 600px;
   }
   .recetas-destacadas-flex {
@@ -387,13 +414,13 @@ h1, h2, h3, h4, h5, h6, p {
 /*Para pantallas de 600px o menos de ancho */
 @media screen and (max-width: 600px) {
   nav {
-    padding: 5px 0 0 0;
+    padding: 5px 15px 3px 15px;
     justify-content: center;
   }
   article {
     padding: 60px 20px;
   }
-  h1, h2, h3, h4, h5, h6, p {
+  h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
     max-width: 500px;
   }
   .recetas-destacadas-flex {
@@ -407,6 +434,9 @@ h1, h2, h3, h4, h5, h6, p {
 
 /*Para pantallas de 470px o menos de ancho */
 @media screen and (max-width: 470px) {
+  nav {
+    padding: 5px 5px 3px 5px;
+  }
   nav .nav-enlaces a {
     padding: 3px 2px;
   }

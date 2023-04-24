@@ -7,7 +7,7 @@
     <!-- animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -216,18 +216,19 @@
             Subí tu foto
           </h2>
           <p>
-            Subí una foto de un plato que hayas cocinado a partir de una receta de TRANKI. Vamos a publicar las mejores en nuestras redes sociales. No te olvides de seguirnos para ver las fotos y más recetas!
+            Subí una foto de un plato que hayas cocinado a partir de una receta de TRANKI. Vamos a publicar las mejores en nuestras redes sociales!
           </p>
 
-          <!-- Carousel -->
-          <div class="container">
+          <!-- Contenedor del arousel -->
+          <div class="cont-lim-ancho-cent">
 
-            <div id="carouselFoto" class="carousel slide" data-bs-ride="carousel">
+            <!-- Carousel -->
+            <div id="carouselFoto" class="carousel slide" data-ride="carousel">
             
               <ol class="carousel-indicators">
-                <li data-bs-target="#carouselFoto" data-bs-slide-to="0" class="active"></li>
-                <li data-bs-target="#carouselFoto" data-bs-slide-to="1"></li>
-                <li data-bs-target="#carouselFoto" data-bs-slide-to="2"></li>
+                <li data-target="#carouselFoto" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselFoto" data-slide-to="1"></li>
+                <li data-target="#carouselFoto" data-slide-to="2"></li>
               </ol>
 
               <div class="carousel-inner">
@@ -241,21 +242,22 @@
                   <img src="./imagenes/tortilla-de-papa.jpg" class="d-block w-100" alt="Tortilla de Papas">
                 </div>
               </div>
-            </div>
 
-            <a class="carousel-control-prev" href="#carouselFoto" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Atras</span>
-            </a>
+              <a class="carousel-control-prev" href="#carouselFoto" data-slide="prev" >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Atras</span>
+              </a>
             
-            <a class="carousel-control-next" href="#carouselFoto" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Siguiente</span>
-            </a>
+              <a class="carousel-control-next" href="#carouselFoto" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+              </a>
+
+            </div><!-- Fin carousel -->
             
           </div>
 
-          <a href="./pagina para subir fotos/subi_tu_foto.html">boton</a>
+          <a class="mi-foto-boton" href="./pagina para subir fotos/subi_tu_foto.html">boton</a>
         </article>
       </section>
 
@@ -283,7 +285,6 @@
     <footer>
 
       <!-- Este es el footer de la página -->
-      <!-- (después puse "otro footer" con info del grupo que no existiría en una página verdadera) -->
       <div class="footer-pagina">
 
         <!-- Texto de la izquierda -->
