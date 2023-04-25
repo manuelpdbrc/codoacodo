@@ -236,8 +236,13 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
   border-radius: 5px;
   margin-left: -5px;
 }
+
 .enlace-rec-mi-foto:hover {
   background-color: var(--color-3);
+}
+
+.no-separar {
+  display: inline-block;
 }
 
 .recetas-destacadas-flex {
