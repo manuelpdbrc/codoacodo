@@ -54,36 +54,61 @@
     <!-- Main -->
     <main>
 
-      <!-- Esta seccion tiene dos artículo que son los banners -->
-      <!-- Dentro de las secciones hay uno o mas articulos con distinto color -->
-      <!-- Todos los articulos tienen cierto padding. Elegimos el color agregando la clase fondo-1, fondo-2, fondo-3, etc -->
-      <section>
+      <!-- Banners -->
+      <section class="banners">
 
-        <article class="articulo-banner-inicio-1 fondo-negro">
-          <h2>
-            Tenés ganas de comer algo rico?
-          </h2>
-          <p>
-            No llames al delivery ni gastes de más!
-          </p>
-          <p>
-            TRANKI te trae recetas prácticas para que cocines fácil y sabroso
-            para vos, tu familia o tus amigos
-          </p>
-        </article>
+        <div id="carouselBanners" class="carousel slide" data-ride="carousel">
 
-        <article class="articulo-banner-inicio-2 fondo-3">
-          <h2>
-            Basta de pensar en qué cocinar
-          </h2>
-          <p>
-            Todas las semanas publicamos nuevas recetas 'Destacadas' para que no
-            tengas que perder tiempo decidiendo qué vas a cocinar
-          </p>
-          <p class="fuente-2">
-            Nosotros nos ocupamos, vos TRANKI...
-          </p>
-        </article>
+          <ol class="carousel-indicators">
+            <li data-target="#carouselBanners" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselBanners" data-slide-to="1"></li>
+            <li data-target="#carouselBanners" data-slide-to="2"></li>
+          </ol>
+
+          <div class="carousel-inner">
+
+            <!-- Banner 1 -->
+            <div class="carousel-item active">
+              <article class="articulo-banner fondo-negro">
+                <h2>
+                  Tenés ganas de comer algo rico?
+                </h2>
+                <h3>
+                  No llames al delivery!
+                </h3>
+                <h3>
+                  Con TRANKI cociná fácil y sabroso
+                </h3>
+              </article>
+            </div>
+
+            <!-- banner 2 -->
+            <div class="carousel-item">
+              <article class="articulo-banner fondo-3">
+                <h2>
+                  Cuando no sabés qué cocinar
+                </h2>
+                <h3>
+                  Nosotros nos ocupamos, vos TRANKI...
+                </h3>
+              </article>
+            </div>
+
+            <!-- banner 3 -->
+            <div class="carousel-item">
+              <article class="articulo-banner fondo-2">
+                <h2>
+                  Sale juntada?
+                </h2>
+                <h3>
+                  Cociná TRANKI para tu familia o tus amigos
+                </h3>
+              </article>
+            </div>
+
+          </div>
+
+        </div>
 
       </section>
 
@@ -100,7 +125,7 @@
             Cuando termines de hacer magia podés enviarnos una foto de tu plato en la sección <a class="enlace-rec-mi-foto" href="#mi-foto"><span class="no-separar">'Mi foto'</span></a>.
           </p>
 
-          <!-- Acá estan las cards de las recetas. Al hacer click en cada una deberíamos ir a la página de esa receta. -->
+          <!-- Contenedor de las cards -->
           <div class="recetas-destacadas-flex">
 
             <!-- Card -->
@@ -229,16 +254,20 @@
               </ol>
 
               <div class="carousel-inner">
+
                 <div class="carousel-item active">
                   <img src="./imagenes/empanadas.jpg" class="d-block w-100" alt="Empanadas">
                 </div>
+
                 <div class="carousel-item">
                   <img src="./imagenes/milanesas.jpg" class="d-block w-100" alt="Milanesas">
                 </div>
+
                 <div class="carousel-item">
                   <img src="./imagenes/tortilla-de-papa.jpg" class="d-block w-100" alt="Tortilla de Papas">
                 </div>
-              </div>
+
+              </div><!-- Fin carousel-inner -->
 
               <a class="carousel-control-prev" href="#carouselFoto" data-slide="prev" >
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>

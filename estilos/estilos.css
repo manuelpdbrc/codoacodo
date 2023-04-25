@@ -146,7 +146,7 @@ a:hover {
 
 .logo-nav a:hover {
   background-color: var(--color-3);
-  color: var(--color-1);
+  color: var(--blanco);
 }
 
 /* los <a> de la barra de navegación (no el logo) */
@@ -162,8 +162,7 @@ nav .nav-enlaces a:hover {
 /* Main */
 /* Estilos generales de secciones (<section>), artículos (<article>), tarjetas (.card), etc */
 section {
-  display: flex;
-  flex-wrap: wrap;
+  width: 100%;
 }
 
 article {
@@ -223,10 +222,24 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
 }
 
 /* Estilos específicos */
-.articulo-banner-inicio-1,
-.articulo-banner-inicio-2 {
-  flex: 350px;
+
+/* Banners */
+#carouselBanners {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.articulo-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
+  height: 300px;
+}
+
+.articulo-banner > h3:last-child {
+  margin-bottom: 0;
 }
 
 /* Recetas destacadas */
@@ -285,11 +298,11 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
   color: var(--color-1);
 }
 
-.carousel {
+#carouselFoto {
   margin-top: 40px;
 }
 
-.carousel img {
+#carouselFoto img {
   max-height: 500px;
   object-fit: cover;
 }
@@ -451,6 +464,9 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
   h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
     max-width: 500px;
   }
+  .articulo-banner {
+    height: 330px;
+  }
   .recetas-destacadas-flex {
     column-gap: 15px;
   }
@@ -470,6 +486,9 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
   }
   article {
     padding: 60px 10px;
+  }
+  .articulo-banner {
+    height: 360px;
   }
   .footer-pagina {
     padding: 50px 15px;
