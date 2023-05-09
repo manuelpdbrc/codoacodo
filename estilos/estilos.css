@@ -12,7 +12,7 @@
 
   --blanco: #fcfcfc;
   --negro: #202020;
-  --gris: #505050;
+  --gris: #404040;
 
   --color-1: #d7ffa3;
   --color-2: #afeee9;
@@ -86,24 +86,24 @@ header img {
   object-fit: cover;
 }
 
-/* Fondo transparente */
+/* Fondo transparente del texto del header */
 header .marco-texto {
   z-index: 20;
-  background-color: rgba(10, 100, 112, 0.8);
+  background-color: rgba(10, 100, 120, 0.8);
   padding: 20px 0;
   border-radius: 10px;
   width: 100%;
   max-width: 350px;
 }
 
-/* TRANKI */
+/* "TRANKI" */
 header .nombre {
   color: var(--blanco);
   font-size: 4rem;
   font-weight: bold;
 }
 
-/* Hoy cocino yo! */
+/* "Hoy cocino yo!" */
 header .frase {
   font-family: var(--font-2), var(--font-1), sans-serif; /* fuente 2 */
   color: var(--color-1);
@@ -134,7 +134,7 @@ a:hover {
   color: var(--blanco);
 }
 
-/* Loguito en nav*/
+/* Logo en nav*/
 .logo-nav {
   font-size: 1.1rem;
   margin-right: auto;
@@ -322,7 +322,7 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
   text-align: center;
 }
 
-/* Formulario Subí tu foto*/ 
+/* Formulario Subí tu foto */ 
 .formulario1 {
   width: 400px;
   padding: 30px;
@@ -365,89 +365,92 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
   margin-top: 30px;
 }
 
-/* Footer de la página de recetas*/
-.footer-pagina {
+/* Footer */
+footer {
   background-color: var(--gris);
   color: var(--blanco);
+  padding: 60px 30px;
+  font-size: 1rem;
+}
+
+.footer-info-pagina {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 30px;
-  padding: 80px 30px;
-  font-size: 1rem;
+  margin-bottom: 60px;
 }
 
-.footer-pagina .footer-texto {
+.footer-texto {
   flex: 0 1 400px;
   text-align: center;
 }
 
-.footer-pagina .footer-texto p {
+.footer-texto p {
   margin: 0;
 }
 
-.footer-pagina .footer-enlaces {
+.footer-enlaces {
   flex: 0 1 300px;
   display: flex;
   justify-content: space-evenly;
   padding-top: 10px;
 }
 
-.footer-pagina .footer-enlaces a {
+.footer-enlaces a {
   height: fit-content;
   padding: 4px;
   font-size: 1.2rem;
 }
 
-.footer-pagina .footer-enlaces a:hover {
+.footer-enlaces a:hover {
   color: var(--color-3);
 }
 
-/* ( Foter extra: info del grupo ) */
-.footer-grupo-2 {
-  background-color: var(--negro);
+/* Info del grupo (dentro del footer) */
+.info-grupo-2 {
   color: var(--color-2);
+  border: 2px solid var(--color-2);
+  max-width: 900px;
+  margin: 0 auto ;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 30px;
-  padding: 60px 30px;
+  column-gap: 20px;
+  row-gap: 35px;
+  padding: 40px 10px;
   font-size: 0.8rem;
 }
 
-/* estos son los div que sean hijos (descendientes directos) de .footer-grupo-2 */
-.footer-grupo-2 > div {
-  flex: 150px;
+/* estos son los div que son hijos (descendientes directos) de .info-grupo-2 */
+/* info del curso, grupo y repositorio */
+.info-grupo-2 > div {
+  flex: 0 0 140px;
   text-align: center;
 }
 
-/* estos son todos los hijos (descendientes directos) ( > * ) de los div que sean hijos ( > div ) de .footer-grupo-2, osea, los <p>, la <ul> y el <a> que están el los div que estan en el footer-grupo-2 */
-.footer-grupo-2 > div > * {
+/* estos son todos los hijos (descendientes directos) ( > * ) de los div que son hijos ( > div ) de .info-grupo-2 */ 
+/* osea, los <p>, la <ul> y el <a> que están el los div que estan en .info-grupo-2 */
+.info-grupo-2 > div > * {
   margin-top: 0;
   margin-bottom: 8px;
 }
 
-.footer-grupo-2 a {
+.info-grupo-2 > div > *:last-child {
+  margin-bottom: 0;
+}
+
+.info-grupo-2 a {
   color: var(--color-2);
   height: fit-content;
-  padding: 1px 6px;
-  border-radius: 50%;
+  padding: 0 5px;
+  border-radius: 5px;
   font-size: 1.2rem;
 }
 
-.footer-grupo-2 a:hover {
+.info-grupo-2 a:hover {
   background-color: var(--color-2);
-  color: var(--negro);
-}
-
-/* Esto es provisorio */
-.mensage-del-grupo {
-  background-color: white;
-  color: red;
-  font-weight: bold;
-  padding: 10px;
-  border: 2px solid red;
-  max-width: 300px
+  color: var(--gris);
 }
 
 /* Media queries (break points o puntos de quiebre ) */
@@ -507,8 +510,7 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
     width: 100%;
     max-width: 320px;
   }
-  .footer-pagina {
-    padding: 80px 15px;
+  footer {
+    padding: 60px 20px;
   }
 }
-
