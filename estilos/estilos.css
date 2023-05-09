@@ -15,7 +15,7 @@
   --gris: #505050;
 
   --color-1: #d7ffa3;
-  --color-2: #9ecac4;
+  --color-2: #afeee9;
   --color-3: #29a748;
   --color-4: #2f7a63;
 
@@ -86,10 +86,10 @@ header img {
   object-fit: cover;
 }
 
-/* Fondo translçucido */
+/* Fondo transparente */
 header .marco-texto {
   z-index: 20;
-  background-color: hsla(187, 84%, 24%, 0.8);
+  background-color: rgba(10, 100, 112, 0.8);
   padding: 20px 0;
   border-radius: 10px;
   width: 100%;
@@ -115,7 +115,7 @@ nav {
   position: sticky;
   top: -1px;
   z-index: 100;
-  padding: 5px 20px 3px 20px;
+  padding: 5px 20px;
   background-color: var(--color-4);
   display: flex;
   justify-content: flex-end;
@@ -136,27 +136,28 @@ a:hover {
 
 /* Loguito en nav*/
 .logo-nav {
+  font-size: 1.1rem;
   margin-right: auto;
 }
 
 .logo-nav a {
-  padding: 1px 5px;
+  padding: 2px 5px;
   border-radius: 5px;
 }
 
 .logo-nav a:hover {
-  background-color: var(--color-3);
-  color: var(--blanco);
+  color: var(--color-1);
 }
 
 /* los <a> de la barra de navegación (no el logo) */
 nav .nav-enlaces a {
   display: inline-block;
-  padding: 3px 5px;
+  padding: 6px 5px 0 5px;
+  border-radius: 5px;
 }
 
 nav .nav-enlaces a:hover {
-  background-color: var(--negro);
+  background-color: var(--gris);
 }
 
 /* Main */
@@ -258,6 +259,7 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
   display: inline-block;
 }
 
+/* Flex con las cards */
 .recetas-destacadas-flex {
   width: 100%;
   max-width: 1200px;
@@ -268,6 +270,7 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
   margin: 40px auto 0 auto;
 }
 
+/* Cards */
 .card-receta {
   width: 100%;
   max-width: 310px;
@@ -276,9 +279,9 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
   box-shadow: 0 2px 15px var(--negro);
 }
 
-/* Algún efecto al poner el puntero sobre sobre una card */
 .card-receta:hover {
   transform: scale(1.05);
+  box-shadow: 0 2px 25px 3px var(--negro);
 }
 
 .card-receta img {
@@ -298,6 +301,7 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
   color: var(--color-1);
 }
 
+/* Carousel de fotos en 'Mi foto' */
 #carouselFoto {
   margin-top: 40px;
 }
@@ -323,7 +327,6 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
   width: 400px;
   padding: 30px;
   background: var(--color-4);
-  color: var(--color-1);
   margin: auto;
   margin-top: 40px;
   border-radius: 4px;
@@ -339,6 +342,16 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
   box-shadow: 10px;
   font-size: 14px;
   color: var(--blanco);
+  outline: none;
+}
+
+.formulario1 .term-y-cond {
+  font-size: 1rem;
+  margin-top: 15px;
+}
+
+.formulario1 .term-y-cond a:hover {
+  color: var(--color-1)
 }
 
 .formulario1 .boton {
@@ -360,7 +373,7 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 30px;
-  padding: 50px 30px;
+  padding: 80px 30px;
   font-size: 1rem;
 }
 
@@ -398,7 +411,7 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 30px;
-  padding: 30px;
+  padding: 60px 30px;
   font-size: 0.8rem;
 }
 
@@ -417,7 +430,7 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
 .footer-grupo-2 a {
   color: var(--color-2);
   height: fit-content;
-  padding: 4px 8px;
+  padding: 1px 6px;
   border-radius: 50%;
   font-size: 1.2rem;
 }
@@ -482,7 +495,7 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
     padding: 5px 5px 3px 5px;
   }
   nav .nav-enlaces a {
-    padding: 3px 2px;
+    padding: 6px 2px 0 2px;
   }
   article {
     padding: 60px 10px;
@@ -490,12 +503,12 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
   .articulo-banner {
     height: 360px;
   }
-  .footer-pagina {
-    padding: 50px 15px;
-  }
   .card-receta {
     width: 100%;
     max-width: 320px;
+  }
+  .footer-pagina {
+    padding: 80px 15px;
   }
 }
 
