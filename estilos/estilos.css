@@ -15,7 +15,7 @@
   --gris: #404040;
 
   --color-1: #d7ffa3;
-  --color-2: #afeee9;
+  --color-2: #b8f5f0;
   --color-3: #29a748;
   --color-4: #2f7a63;
 
@@ -23,14 +23,14 @@
   --selection-color: var(--blanco);
 }
 
-/* Color de texto y fondo cuanso se selecciona texto en la página */
+/* Color de texto y fondo cuando se selecciona texto en la página */
 /* Codigo para Firefox */
 ::-moz-selection {
   background: var(--selection-background);
   color: var(--selection-color);
 }
 
-/* Color de texto y fondo cuanso se selecciona texto en la página */
+/* Color de texto y fondo cuando se selecciona texto en la página */
 ::selection {
   background: var(--selection-background);
   color: var(--selection-color);
@@ -79,6 +79,7 @@ header {
 }
 
 header img {
+  background-color: var(--negro);
   position: absolute;
   z-index: 10;
   width: 100%;
@@ -161,25 +162,25 @@ nav .nav-enlaces a:hover {
 }
 
 /* Main */
-/* Estilos generales de secciones (<section>), artículos (<article>), tarjetas (.card), etc */
+/* Estilos generales de <section>, <article>, <h1>, etc */
 section {
   width: 100%;
+  padding: 60px 30px;
 }
 
 article {
-  padding: 60px 30px;
   width: 100%;
 }
 
 h1, h2 {
   font-family: var(--font-2), var(--font-1), sans-serif;
   font-size: 2.8rem;
-  font-weight: 100; /* los h2 están por defecto en negrita (bold) pero con esta fuente queda medio mal, con font-weight:100 ya no están en negrita */
   margin-bottom: 35px;
+  font-weight: 100; /* los h2 están por defecto en negrita (bold) pero con esta fuente queda medio mal, con font-weight:100 ya no están en negrita */
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
 }
 
 h3, h4, h5, h6 {
@@ -187,10 +188,14 @@ h3, h4, h5, h6 {
 }
 
 p {
-  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
-h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
+p:last-child {
+  margin-bottom: 0;
+}
+
+.limite-ancho-01 {
   width: 100%;
   max-width: 800px;
   margin-left: auto;
@@ -225,6 +230,11 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
 /* Estilos específicos */
 
 /* Banners */
+.banners {
+  margin: 0;
+  padding: 0;
+}
+
 #carouselBanners {
   width: 100%;
   margin: 0;
@@ -237,6 +247,7 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
   justify-content: center;
   text-align: center;
   height: 300px;
+  padding: 20px 10px;
 }
 
 .articulo-banner > h3:last-child {
@@ -252,7 +263,7 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
 }
 
 .enlace-rec-mi-foto:hover {
-  background-color: var(--color-3);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .no-separar {
@@ -262,7 +273,7 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
 /* Flex con las cards */
 .recetas-destacadas-flex {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -273,7 +284,7 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
 /* Cards */
 .card-receta {
   width: 100%;
-  max-width: 310px;
+  max-width: 280px;
   border-radius: 10px;
   font-size: 1rem;
   box-shadow: 0 2px 15px var(--negro);
@@ -286,7 +297,7 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
 
 .card-receta img {
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
   border-bottom: 3px solid var(--color-2);
@@ -307,8 +318,10 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
 }
 
 #carouselFoto img {
-  max-height: 500px;
-  object-fit: cover;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
 }
 
 .mi-foto-boton {
@@ -322,7 +335,7 @@ h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
   text-align: center;
 }
 
-/* Formulario Subí tu foto */ 
+/* Formulario 'Subí tu foto' */ 
 .formulario1 {
   width: 400px;
   padding: 30px;
@@ -376,25 +389,26 @@ footer {
 .footer-info-pagina {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   gap: 30px;
   margin-bottom: 60px;
 }
 
 .footer-texto {
-  flex: 0 1 400px;
+  flex: 0 1 250px;
   text-align: center;
 }
 
 .footer-texto p {
   margin: 0;
+  padding: 4px;
 }
 
 .footer-enlaces {
-  flex: 0 1 300px;
+  flex: 0 1 250px;
   display: flex;
-  justify-content: space-evenly;
-  padding-top: 10px;
+  justify-content: center;
+  gap: 25px;
 }
 
 .footer-enlaces a {
@@ -457,7 +471,7 @@ footer {
 
 /*Para pantallas de 900px o menos de ancho */
 @media screen and (max-width: 900px) {
-  h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
+  .limite-ancho-01 {
     max-width: 600px;
   }
   .recetas-destacadas-flex {
@@ -465,6 +479,12 @@ footer {
   }
   .card-receta {
     max-width: 250px;
+  }
+  #carouselFoto img {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 430px;
+    object-fit: contain;
   }
 }
 
@@ -474,10 +494,10 @@ footer {
     padding: 5px 15px 3px 15px;
     justify-content: center;
   }
-  article {
-    padding: 60px 20px;
+  section {
+    padding: 60px 25px;
   }
-  h1, h2, h3, h4, h5, h6, p, .cont-lim-ancho-cent {
+  .limite-ancho-01 {
     max-width: 500px;
   }
   .articulo-banner {
@@ -488,7 +508,13 @@ footer {
   }
   .card-receta {
     width: calc((100% - 30px) / 2);
-    min-width: 200px;
+    min-width: 180px;
+  }
+  #carouselFoto img {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
   }
 }
 
@@ -500,15 +526,15 @@ footer {
   nav .nav-enlaces a {
     padding: 6px 2px 0 2px;
   }
-  article {
-    padding: 60px 10px;
+  section {
+    padding: 60px 20px;
   }
   .articulo-banner {
     height: 360px;
   }
   .card-receta {
     width: 100%;
-    max-width: 320px;
+    max-width: 340px;
   }
   footer {
     padding: 60px 20px;
