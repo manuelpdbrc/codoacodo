@@ -335,6 +335,16 @@ p:last-child {
   object-fit: contain;
 }
 
+.carousel-caption h5,
+.carousel-caption p {
+  background-color: rgb(0, 0, 0, 0.4);
+  width: fit-content;
+  margin: 10px auto;
+  padding: 12px;
+  border-radius: 10px;
+  text-shadow: 1px 1px 2px var(--negro);
+}
+
 .mi-foto-boton {
   display: block;
   width: fit-content;
@@ -345,6 +355,11 @@ p:last-child {
 .pag-subi-tu-foto > p {
   text-align: center;
 }
+
+.pag-subi-tu-foto h1 {
+  text-shadow: 1px 1px 3px var(--selection-background);
+}
+
 
 /* Formulario 'Subí tu foto' */ 
 .formulario1 {
