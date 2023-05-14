@@ -161,6 +161,17 @@ nav .nav-enlaces a:hover {
   background-color: var(--gris);
 }
 
+/* los <a> que funcionan como boton */
+.mi-foto-boton {
+  background-color: #124122;
+  font-family: Lobster;
+  padding:20px;
+  border-radius: 5px;
+  font-size: 28px;
+  box-shadow: 5px 3px 5px var(--color-4);
+  
+}
+
 /* Main */
 /* Estilos generales de <section>, <article>, <h1>, etc */
 section {
@@ -337,12 +348,17 @@ p:last-child {
 
 /* Formulario 'Subí tu foto' */ 
 .formulario1 {
-  width: 400px;
+  width: 100%;
+  max-width: 500px;
   padding: 30px;
   background: var(--color-4);
   margin: auto;
   margin-top: 40px;
   border-radius: 4px;
+}
+
+.formulario1 input {
+    font-family: var(--font-1);
 }
 
 .form2 {
@@ -370,12 +386,13 @@ p:last-child {
 .formulario1 .boton {
   width: 100%;
   padding: 15px;
-  font-size: 20px;
+  font-size: 30px;
   border-radius: 10px;
   border-color: var(--color-3);
   background-color: var(--color-1);
   color: var(--negro);
   margin-top: 30px;
+  font-family: lobster;
 }
 
 /* Footer */
