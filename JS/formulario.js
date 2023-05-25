@@ -9,8 +9,8 @@ function validar (e) {
     validarLocalidad(e)
     validarEmail (e)
     validarTitulo (e)
+    validarArchivo(e)
     validarCheckbox(e)
-
 }
 
 function validarNombre (e) {
@@ -39,11 +39,9 @@ function validarLocalidad (e) {
 
 function validarEmail (e) {
     let email = formulario.querySelector('[name="email"]').value
-    let expReg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/;
-    if (expReg.test(email)){
-        alert("La dirección de email " + email + " es correcta.");
-       } else {
-        alert("La dirección de email es incorrecta.");
+    let expReg = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    if (!expReg.test(email)){
+        alert("La dirección de email " + email + " es incorrecta!");
        }
 }
 
@@ -55,6 +53,15 @@ function validarTitulo (e) {
     }
 }
 
+function validarArchivo(e) {
+    let archivo = formulario.querySelector('[name="archivo"]')
+    if (!archivo.value.includes(".png") && 
+        !archivo.value.includes(".jpg") && 
+        !archivo.value.includes(".jpeg")) {
+        alert("Selecciona una foto!")
+        e.preventDefault()
+    }
+}
 
 function validarCheckbox (e) {
     let terminos = formulario.querySelector(".terminosycondiciones")
