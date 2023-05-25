@@ -1,4 +1,4 @@
-let ciudades = document.querySelectorAll("#ciudad")
+let ciudades = document.querySelectorAll(".ciudad")
 
 ciudades.forEach(elem => {
     elem.addEventListener("click", () => {
