@@ -1,0 +1,1 @@
+let formularioreceta = document.querySelector()
