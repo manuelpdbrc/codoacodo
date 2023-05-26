@@ -3,7 +3,6 @@ let formulario = document.querySelector('.formulario1')
 formulario.addEventListener("submit", validar)
 
 function validar (e) {
-    e.preventDefault()
     validarNombre(e)
     validarApellido(e)
     validarLocalidad(e)
@@ -42,14 +41,15 @@ function validarEmail (e) {
     let expReg = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
     if (!expReg.test(email)){
         alert("La dirección de email " + email + " es incorrecta!");
-       }
+        e.preventDefault()
+    }
 }
 
 function validarTitulo (e) {
     let titulo = formulario.querySelector('[name="titulo"]')
     if (titulo.value == 0){
         alert("No te olvides de colocar el titulo de tu plato!")
-        e.preventDefault
+        e.preventDefault()
     }
 }
 
