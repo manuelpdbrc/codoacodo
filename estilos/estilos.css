@@ -407,7 +407,61 @@ p:last-child {
   background-color: var(--color-1);
   color: var(--negro);
   margin-top: 30px;
-  font-family: lobster;
+  font-family: var(--font-2);
+}
+
+#esta-para-guiso h4 {
+  margin-bottom: 40px;
+}
+
+#temperaturas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: auto;
+}
+
+.ciudad {
+  background-color: var(--gris);
+  border: 2px solid var(--color-4);
+  color: var(--blanco);
+  font-size: 1rem;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: center;
+  text-align: center;
+}
+
+.ciudad p {
+  margin: 0;
+}
+
+.ciudad .temp {
+  font-size: 1.5rem;
+}
+
+.ciudad .probab-texto {
+  max-width: 100px;
+  font-size: 0.8rem;
+}
+
+.ciudad .prob-muy-alta {
+  color: #1eff00;
+}
+
+.ciudad .prob-alta {
+  color: greenyellow;
+}
+
+.ciudad .prob-media {
+  color: yellow;
+}
+
+.ciudad .prob-baja {
+  color: orange;
 }
 
 /* Footer */
@@ -457,6 +511,7 @@ footer {
 .info-grupo-2 {
   color: var(--color-2);
   border: 2px solid var(--color-2);
+  border-radius: 10px;
   max-width: 900px;
   margin: 0 auto ;
   display: flex;
@@ -572,31 +627,3 @@ footer {
     padding: 60px 20px;
   }
 }
-.ciudad {
-  background-color: var(--gris);
-  border-color: #2f7a63;
-  border-style:solid;
-  color: var(--blanco);
-  font-size: 1rem;
-  padding: 25px 25px;
-  width: 200px;
-  display:inline-block;
-}
-.ciudad:hover{
-  cursor:pointer;
-  color:#2f7a63
-}
-#mi-receta-boton{
-  background-color:#202020;
-  font-family: Lobster;
-  padding:20px;
-  border-radius: 5px;
-  font-size: 28px;
-  box-shadow: 5px 3px 5px var(--color-4);
-  justify-content: center;
-}
-
-#articulo-subir-receta{
-  text-align: center;
-}
-.p-subir-receta{text-align: left;}
